@@ -23,5 +23,7 @@ urlpatterns = [
     path('api/post',views.PostList.as_view()),
     path('api/post/<int:pk>/vote',views.VoteCreate.as_view()),
     path('api-auth/',include('rest_framework.urls')),
-    path('api/post/<int:pk>',views.PostRetriveDestroy.as_view())
+    path('api/post/<int:pk>',views.PostRetriveDestroy.as_view()),
+    path('api/signup',views.signup),
+    path('api/login',views.login),
 ]
