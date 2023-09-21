@@ -85,7 +85,7 @@ def login(request):
                 token = Token.objects.get(user=user)
             except:
                 token = Token.objects.create(user=user)
-            return JsonResponse({'token':str(token)},status=200)
+            return JsonResponse({'token':str(token),'user':user.username},status=200)
 
 
 
